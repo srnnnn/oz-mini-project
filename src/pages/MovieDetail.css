@@ -1,0 +1,41 @@
+
+.movieDetail{
+    position: relative;
+}
+.imgContainer {
+    position: relative;
+  }
+.movieText{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content:end;
+    align-items: start;
+    background: linear-gradient(to bottom, #19191900, #191919f2);
+    color: white;
+}
+.movieDetailImg{
+    width: 100%;
+    height: 80%;
+}
+.movieDetailVote,
+.movieDetailGenre,
+.movieDetailOverView{
+    padding: 10px;
+    color: white;
+    font-size: 22px;
+}
+
+.movieDetailTitle{
+    font-size: 44px;
+    font-weight: 600;
+    padding: 10px;
+    color: white;
+}
+.movieDetailOverView{
+    margin-bottom: 15px;
+}
