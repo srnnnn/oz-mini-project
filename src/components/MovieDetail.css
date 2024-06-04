@@ -1,0 +1,53 @@
+.movieDetail {
+  position: relative;
+  /* padding: 10px; */
+  background-color: black;
+}
+.imgContainer {
+  position: relative;
+  text-align: center;
+}
+.movieTextDiv {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.movieText {
+  /* position: absolute; */
+  width: 80%;
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  align-items: start;
+  background: linear-gradient(to bottom, #00000000, #000000);
+  color: white;
+  z-index: 3;
+}
+.movieDetailImg {
+  width: 80%;
+  height: 80%;
+  z-index: -99;
+}
+.movieDetailVote,
+.movieDetailGenre,
+.movieDetailOverView {
+  padding: 10px 20px 10px 20px;
+  color: white;
+  font-size: 22px;
+}
+
+.movieDetailTitle {
+  font-size: 50px;
+  font-weight: 600;
+  padding: 10px 20px 10px 20px;
+  color: white;
+}
+.movieDetailOverView {
+  margin-bottom: 15px;
+}

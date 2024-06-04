@@ -1,0 +1,48 @@
+.navContainer {
+  width: 100vw;
+  height: 60px;
+  background-color: black;
+  display: flex;
+  justify-content: space-between;
+  position: sticky;
+  left: 0;
+  top: 0;
+  z-index: 99;
+}
+.logoDiv {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 50px;
+}
+
+.logoImg {
+  width: 130px;
+  object-fit: cover;
+}
+.btnDiv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 50px;
+}
+.loginBtn,
+.signupBtn {
+  border: 1px solid #424242;
+  border-radius: 5px;
+  height: 2.3rem;
+  width: 4.4rem;
+  background-color: black;
+  color: white;
+  margin-left: 20px;
+  cursor: pointer;
+  font-weight: 400;
+}
+
+.loginBtn:hover,
+.signupBtn:hover {
+  background-color: #424242;
+}
