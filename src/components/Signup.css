@@ -36,6 +36,12 @@ h1 {
   border-radius: 5px;
   font-size: 18px;
 }
+.signTextDiv label {
+  align-self: flex-start;
+  padding: 10px;
+  margin-left: 1.5rem;
+  font-size: 18px;
+}
 .submitBtn {
   width: 33rem;
   height: 60px;
@@ -51,11 +57,12 @@ h1 {
   background-color: #2a2a2a;
 }
 
-input::-webkit-input-placeholder {
+.signTextDiv input::-webkit-input-placeholder {
   font-size: 17px;
   color: #8a8a8a;
 }
-input {
+
+.signTextDiv input {
   appearance: none; /* 기본 브라우저 테두리 제거 */
   outline: none;
   border: none;
@@ -64,6 +71,6 @@ input {
   border-radius: 5px;
 }
 
-input:focus {
+.signTextDiv input:focus {
   background-color: #ddd;
 }

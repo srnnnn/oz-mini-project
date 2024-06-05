@@ -6,6 +6,7 @@ import api from "../api/axios";
 const MovieDetail = () => {
   const { id } = useParams();
   const [movieDetail, setMovieDetail] = useState(null);
+  const [error, setError] = useState("");
 
   useEffect(() => {
     const fetchMovieData = async () => {
@@ -14,11 +15,15 @@ const MovieDetail = () => {
         setMovieDetail(resp.data);
       } catch (error) {
         console.error("Error: ", error);
+        setError(error.code);
       }
     };
     fetchMovieData();
   }, [id]);
 
+  if (error) {
+    return <div>에러가 발생했습니다.</div>;
+  }
   if (!movieDetail) {
     return <div>로딩중..</div>;
   }

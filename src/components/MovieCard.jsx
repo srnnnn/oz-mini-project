@@ -5,7 +5,7 @@ const MovieCard = ({ poster_path, title, id, vote_avg }) => {
   return (
     <div className="movieCard" key={id}>
       <Link
-        to={`details/${id}`}
+        to={`/details/${id}`}
         style={{ textDecoration: "none", color: "black" }}
       >
         <img

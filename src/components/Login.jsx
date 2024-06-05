@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import "./Login.css";
 
 const Login = () => {
@@ -23,9 +24,11 @@ const Login = () => {
         <button type="submit" className="submitLoginBtn">
           로그인
         </button>
-        <button type="submit" className="submitSignupBtn">
-          회원가입
-        </button>
+        <Link to={"/signup"}>
+          <button type="submit" className="submitSignupBtn">
+            회원가입
+          </button>
+        </Link>
       </div>
     </div>
   );

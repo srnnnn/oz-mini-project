@@ -1,0 +1,24 @@
+.searchContainer {
+  /* display: flex;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+  justify-content: center; */
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  width: 100vw;
+  box-sizing: border-box;
+  padding: 0 calc(3.5vw + 5px);
+}
+.noSearch {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
+}
+
+.noSearchText {
+  text-align: center;
+  padding: 20px;
+  border-radius: 10px;
+  font-size: 30px;
+}

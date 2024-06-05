@@ -9,7 +9,7 @@
 }
 .movieImg {
   width: 260px;
-  height: 400px;
+  height: 390px;
   object-fit: cover;
   border-radius: 10px;
 }
@@ -21,4 +21,47 @@
 .movieVote {
   padding: 5px;
   font-size: 15px;
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .movieCard {
+    width: 10rem;
+    height: auto;
+  }
+  .movieImg {
+    width: 10rem;
+    height: 240px;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+}
+@media (min-width: 400px) and (max-width: 768px) {
+  .movieCard {
+    width: 10rem;
+    height: auto;
+  }
+  .movieImg {
+    width: 10rem;
+    height: 240px;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+}
+@media (max-width: 399px) {
+  .movieCard {
+    width: 8rem;
+    height: auto;
+  }
+  .movieImg {
+    width: 8rem;
+    height: 192px;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+  .movieTitle {
+    font-size: 0.9rem;
+  }
+  .movieVote {
+    font-size: 0.8rem;
+  }
 }

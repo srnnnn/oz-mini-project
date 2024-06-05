@@ -1,12 +1,13 @@
 import "./App.css";
 import MovieCard from "./components/MovieCard";
-import { Route, Routes } from "react-router-dom";
+import { Outlet, Route, Routes } from "react-router-dom";
 import MovieDetail from "./components/MovieDetail";
 import api from "./api/axios";
 import { useEffect, useState } from "react";
 import NavBar from "./components/NavBar";
 import Signup from "./components/Signup";
 import Login from "./components/Login";
+import Search from "./components/Search";
 
 function App() {
   const [movies, setMovies] = useState([]);
@@ -39,14 +40,25 @@ function App() {
     );
   }
 
+  const Layout = () => {
+    return (
+      <>
+        <NavBar />
+        <Outlet />
+      </>
+    );
+  };
+
   return (
     <>
-      <NavBar />
       <Routes>
-        <Route path="/" element={<MovieList />} />
-        <Route path="details/:id" element={<MovieDetail />} />
-        <Route path="signup" element={<Signup />}></Route>
-        <Route path="login" element={<Login />}></Route>
+        <Route path="/" element={<Layout />}>
+          <Route path="/" element={<MovieList />} />
+          <Route path="details/:id" element={<MovieDetail />} />
+          <Route path="signup" element={<Signup />}></Route>
+          <Route path="login" element={<Login />}></Route>
+          <Route path="search" element={<Search />}></Route>
+        </Route>
       </Routes>
     </>
   );

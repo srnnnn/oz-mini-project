@@ -1,6 +1,6 @@
 .navContainer {
   width: 100vw;
-  height: 60px;
+  height: 50px;
   background-color: black;
   display: flex;
   justify-content: space-between;
@@ -20,9 +20,38 @@
 }
 
 .logoImg {
-  width: 130px;
+  width: 100px;
   object-fit: cover;
 }
+
+.searchDiv {
+  width: 17rem;
+  height: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 2px solid #ffffff8f;
+}
+
+.searchDiv input {
+  width: 100%;
+  height: 100%;
+  padding: 10px 5px 0 15px;
+  border: none;
+  color: white;
+  background-color: transparent;
+  outline: none;
+  font-size: 20px;
+}
+.searchDiv input::-webkit-input-placeholder {
+  font-size: 20px;
+}
+.searchIcon {
+  color: white;
+  font-size: 1.5em;
+  padding-top: 0.3rem;
+}
+
 .btnDiv {
   display: flex;
   justify-content: center;
@@ -33,8 +62,8 @@
 .signupBtn {
   border: 1px solid #424242;
   border-radius: 5px;
-  height: 2.3rem;
-  width: 4.4rem;
+  height: 2rem;
+  width: 4rem;
   background-color: black;
   color: white;
   margin-left: 20px;
@@ -45,4 +74,29 @@
 .loginBtn:hover,
 .signupBtn:hover {
   background-color: #424242;
+}
+
+@media (max-width: 740px) {
+  .signupBtn {
+    display: none;
+  }
+  .searchDiv {
+    display: none;
+  }
+  .loginBtn {
+    border: none;
+  }
+}
+@media (max-width: 440px) {
+  .btnDiv {
+    margin-right: 1rem;
+  }
+  .logoDiv {
+    margin-left: 1rem;
+  }
+  .loginBtn {
+    height: 2rem;
+    width: 3.3rem;
+    font-size: 0.8rem;
+  }
 }
