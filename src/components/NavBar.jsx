@@ -9,7 +9,7 @@ const NavBar = () => {
 
   const handleSearchInput = (e) => {
     setSearch(e.target.value);
-    navigate(`/search?q=${search}`);
+    navigate(`/search?q=${e.target.value}`); //search로 했을때는 마지막 자음/모음 안들어감
   };
 
   return (

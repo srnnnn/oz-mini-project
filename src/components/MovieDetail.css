@@ -1,6 +1,5 @@
-.movieDetail {
+.movieDetailContainer {
   position: relative;
-  /* padding: 10px; */
   background-color: black;
 }
 .imgContainer {
@@ -37,17 +36,103 @@
 .movieDetailVote,
 .movieDetailGenre,
 .movieDetailOverView {
-  padding: 10px 20px 10px 20px;
+  padding: 0.6rem 1.3rem;
   color: white;
-  font-size: 22px;
+  font-size: 1.7rem;
 }
 
 .movieDetailTitle {
-  font-size: 50px;
+  font-size: 3.3rem;
   font-weight: 600;
-  padding: 10px 20px 10px 20px;
+  padding: 0.6rem 1.3rem;
   color: white;
 }
 .movieDetailOverView {
   margin-bottom: 15px;
+}
+.movieSimilarContainer {
+  width: 100vw;
+}
+h2 {
+  font-size: 2.5rem;
+  padding-left: 2rem;
+}
+
+@media (max-width: 1440px) {
+  .movieTextDiv {
+    position: relative;
+    left: 0;
+    transform: none;
+  }
+  .movieText {
+    width: 100%;
+  }
+  .movieDetailImg {
+    width: 100%;
+    height: 100%;
+  }
+  .movieDetailVote,
+  .movieDetailGenre,
+  .movieDetailOverView {
+    font-size: 1.4rem;
+  }
+  .movieDetailTitle {
+    font-size: 3rem;
+  }
+  h2 {
+    font-size: 2rem;
+  }
+}
+@media (min-width: 400px) and (max-width: 768px) {
+  .movieTextDiv {
+    position: relative;
+    left: 0;
+    transform: none;
+  }
+  .movieText {
+    width: 100%;
+  }
+  .movieDetailImg {
+    width: 100%;
+    height: 100%;
+  }
+  .movieDetailVote,
+  .movieDetailGenre,
+  .movieDetailOverView {
+    font-size: 1rem;
+  }
+  .movieDetailTitle {
+    font-size: 2rem;
+  }
+  h2 {
+    font-size: 2rem;
+  }
+}
+@media (max-width: 480px) {
+  .movieTextDiv {
+    position: relative;
+    left: 0;
+    transform: none;
+    width: 100%;
+  }
+  .movieText {
+    width: 100%;
+  }
+  .movieDetailImg {
+    width: 100%;
+    height: 100%;
+  }
+  .movieDetailVote,
+  .movieDetailGenre,
+  .movieDetailOverView {
+    font-size: 0.8rem;
+    padding: 0.4rem 1rem;
+  }
+  .movieDetailTitle {
+    font-size: 1.5rem;
+    padding: 0.4rem 1rem;
+  }
+  h2 {
+    font-size: 1.5rem;
+  }
 }

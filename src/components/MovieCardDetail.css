@@ -1,0 +1,24 @@
+.movieCardDetail {
+  padding: 0 1rem;
+}
+.MovieCardDetailImg {
+  border-radius: 1rem;
+  width: 100%;
+  height: auto;
+}
+.noImage {
+  width: 500px; /* 가로폭을 500px로 설정 */
+  max-width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #646464c0;
+  color: #fff;
+  font-size: 1.5rem;
+  border-radius: 1rem;
+}
+.noImage img {
+  width: 100%;
+  height: 100%;
+  border-radius: 1rem;
+}

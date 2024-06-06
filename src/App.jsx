@@ -5,9 +5,10 @@ import MovieDetail from "./components/MovieDetail";
 import api from "./api/axios";
 import { useEffect, useState } from "react";
 import NavBar from "./components/NavBar";
-import Signup from "./components/Signup";
-import Login from "./components/Login";
-import Search from "./components/Search";
+import Signup from "./components/pages/Signup";
+import Login from "./components/pages/Login";
+import Search from "./components/pages/Search";
+import Footer from "./components/Footer";
 
 function App() {
   const [movies, setMovies] = useState([]);
@@ -45,6 +46,7 @@ function App() {
       <>
         <NavBar />
         <Outlet />
+        <Footer />
       </>
     );
   };
