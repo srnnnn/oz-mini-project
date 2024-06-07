@@ -9,12 +9,13 @@ const Search = () => {
   const [searchMovie, setSearchMovie] = useState([]);
 
   const useQuery = () => {
-    return new URLSearchParams(useLocation().search); //현재 url의 검색 문자열 가져옴 -> urlSearchParams객체로 변환해서 반환
+    return new URLSearchParams(useLocation().search);
+    //uselocation().search 현재 url의 쿼리 문자열 가져옴 -> urlSearchParams객체로 변환해서 반환
   };
 
   let query = useQuery(); //반환받은 urlSearchParams객체
   //   console.log(query);
-  const searchTerm = query.get("q"); //q?로 넘겼던 파라미터 받음
+  const searchTerm = query.get("q"); //넘겼던 파라미터 받음 key가 q인 value를 받음
   //   console.log(searchTerm);
   const debounceSearchTerm = useDebounce(searchTerm, 500);
 
@@ -22,14 +23,15 @@ const Search = () => {
     if (debounceSearchTerm) {
       fetchSearchMovieData(searchTerm);
     }
-  }, [debounceSearchTerm]);
+  }, [debounceSearchTerm]); //한글자라도 들어오면 실행할 거 같은데 안됨
 
   const fetchSearchMovieData = async (searchTerm) => {
     try {
+      console.log("api 함수" + searchTerm);
       const resp = await api.get(
         `/search/multi?include_adult=false&query=${searchTerm}`
       );
-      console.log(resp);
+      // console.log(resp);
       setSearchMovie(resp.data.results);
     } catch (error) {
       console.log(error);

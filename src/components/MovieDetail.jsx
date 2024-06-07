@@ -77,7 +77,10 @@ const MovieDetail = () => {
           spaceBetween={0}
           breakpoints={{
             0: {
-              slidesPerView: 2, // 1개의 슬라이드를 보여줌
+              slidesPerView: 1, // 1개의 슬라이드를 보여줌
+            },
+            200: {
+              slidesPerView: 2,
             },
             768: {
               slidesPerView: 3,

@@ -1,10 +1,19 @@
 .movieCardDetail {
-  padding: 0 1rem;
+  padding: 0 0.5rem;
+}
+.MovieCardDetailImgDiv {
+  padding: 0.5rem;
 }
 .MovieCardDetailImg {
   border-radius: 1rem;
   width: 100%;
   height: auto;
+  min-width: 6rem;
+  transition: transform 0.3s ease;
+}
+.noImageDiv {
+  padding: 0.5rem;
+  overflow: hidden;
 }
 .noImage {
   width: 500px; /* 가로폭을 500px로 설정 */
@@ -16,9 +25,17 @@
   color: #fff;
   font-size: 1.5rem;
   border-radius: 1rem;
+  transition: transform 0.3s ease;
 }
 .noImage img {
   width: 100%;
   height: 100%;
   border-radius: 1rem;
+}
+
+.MovieCardDetailImg:hover {
+  transform: scale(1.05);
+}
+.noImage:hover {
+  transform: scale(1.05);
 }

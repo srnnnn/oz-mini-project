@@ -4,7 +4,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { IoSearch } from "react-icons/io5";
 
 const NavBar = () => {
-  const [search, setSearch] = useState("");
+  const [search, setSearch] = useState(""); //search =
   const navigate = useNavigate();
 
   const handleSearchInput = (e) => {

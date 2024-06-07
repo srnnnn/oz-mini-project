@@ -22,51 +22,69 @@
 }
 .movieTitle {
   padding: 5px;
-  font-size: 20px;
+  font-size: 1.5rem;
 }
 
 .movieVote {
   padding: 5px;
-  font-size: 15px;
+  font-size: 1rem;
 }
 .movieImg:hover {
   transform: scale(1.05);
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {
+  .movieImgDiv {
+    width: 10rem;
+    height: 240px;
+  }
   .movieCard {
     width: 10rem;
     height: auto;
   }
   .movieImg {
-    width: 10rem;
-    height: 240px;
-    object-fit: cover;
-    border-radius: 10px;
+    width: 100%;
+    height: 100%;
+  }
+  .movieTitle {
+    font-size: 1.3rem;
+  }
+  .movieVote {
+    font-size: 0.9rem;
   }
 }
 @media (min-width: 400px) and (max-width: 768px) {
+  .movieImgDiv {
+    width: 10rem;
+    height: 240px;
+  }
   .movieCard {
     width: 10rem;
     height: auto;
   }
   .movieImg {
-    width: 10rem;
-    height: 240px;
-    object-fit: cover;
-    border-radius: 10px;
+    width: 100%;
+    height: 100%;
+  }
+  .movieTitle {
+    font-size: 1.3rem;
+  }
+  .movieVote {
+    font-size: 0.9rem;
   }
 }
 @media (max-width: 480px) {
+  .movieImgDiv {
+    width: 7rem;
+    height: 168px;
+  }
   .movieCard {
     width: 7rem;
     height: auto;
   }
   .movieImg {
-    width: 7rem;
-    height: 168px;
-    object-fit: cover;
-    border-radius: 10px;
+    width: 100%;
+    height: 100%;
   }
   .movieTitle {
     font-size: 0.9rem;
