@@ -1,16 +1,24 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./NavBar.css";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { IoSearch } from "react-icons/io5";
 
 const NavBar = () => {
-  const [search, setSearch] = useState(""); //search =
+  const [search, setSearch] = useState("");
   const navigate = useNavigate();
+
+  const location = useLocation();
 
   const handleSearchInput = (e) => {
     setSearch(e.target.value);
-    navigate(`/search?q=${e.target.value}`); //search로 했을때는 마지막 자음/모음 안들어감
+    navigate(`/search?q=${e.target.value}`); //search로 했을때는 마지막 자음/모음 안들어감-> 영어로 하면 가능
   };
+
+  useEffect(() => {
+    if (location.pathname === "/") {
+      setSearch("");
+    }
+  }, [location]);
 
   return (
     <nav className="navContainer">
@@ -19,6 +27,7 @@ const NavBar = () => {
           <img src="src/images/logo.png" alt="로고" className="logoImg"></img>
         </div>
       </Link>
+      {location.pathname === ""}
       <div className="searchDiv">
         <IoSearch className="searchIcon" />
         <input

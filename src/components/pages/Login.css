@@ -60,6 +60,7 @@
   color: white;
   padding: 10px;
   margin-top: 50px;
+  cursor: pointer;
 }
 .submitSignupBtn {
   width: 32rem;
@@ -71,6 +72,7 @@
   color: #3f3f3f;
   padding: 10px;
   margin-top: 20px;
+  cursor: pointer;
 }
 .submitLoginBtn:hover {
   background-color: #2a2a2a;
@@ -78,6 +80,43 @@
 .submitSignupBtn:hover {
   background-color: #2a2a2a;
   color: white;
+}
+
+.loginHr {
+  width: 90%;
+  margin: 2rem 0 1rem 0;
+  opacity: 50%;
+  padding: 0;
+  text-align: center;
+  border: none;
+  border-top: 1px solid #2a2a2a;
+}
+.loginHr legend {
+  padding: 0 2rem;
+}
+.socialLoginContainer {
+  width: 32rem;
+  height: 4.2rem;
+  display: flex;
+  align-items: center;
+  border-radius: 5px;
+  justify-content: center;
+}
+.googleImgDiv {
+  height: 3rem;
+  display: flex;
+  justify-content: center;
+  margin-right: 0.5rem;
+}
+.googleImg {
+  width: 100%;
+}
+.socialLoginTextDiv {
+  cursor: pointer;
+}
+.socialLoginTextDiv p {
+  font-size: 1.3rem;
+  text-align: center;
 }
 @media (max-width: 768px) {
   .loginContainer {

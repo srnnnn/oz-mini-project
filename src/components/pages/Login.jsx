@@ -1,7 +1,22 @@
 import { Link } from "react-router-dom";
 import "./Login.css";
+import { getAuth, signInWithPopup, GoogleAuthProvider } from "firebase/auth";
+import app from "../../firebase";
 
 const Login = () => {
+  const auth = getAuth(app);
+  const provider = new GoogleAuthProvider();
+
+  const handleAuth = () => {
+    signInWithPopup(auth, provider)
+      .then((result) => {
+        console.log(result);
+      })
+      .catch((error) => {
+        alert(error.message);
+      });
+  };
+
   return (
     <div className="login">
       <div className="loginContainer">
@@ -25,11 +40,26 @@ const Login = () => {
           <button type="submit" className="submitLoginBtn">
             로그인
           </button>
-          <Link to={"/signup"}>
+          {/* <Link to={"/signup"}>
             <button type="submit" className="submitSignupBtn">
               회원가입
             </button>
-          </Link>
+          </Link> */}
+          {/* <hr className="loginHr" /> */}
+          <fieldset className="loginHr">
+            <legend>또는 다른 서비스 계정으로 로그인</legend>
+          </fieldset>
+          <div className="socialLoginContainer">
+            <div className="googleImgDiv">
+              <img
+                src="src/images/Search_GSA.original.png"
+                className="googleImg"
+              />
+            </div>
+            <div className="socialLoginTextDiv" onClick={handleAuth}>
+              <p>Google로 로그인</p>
+            </div>
+          </div>
         </div>
       </div>
     </div>

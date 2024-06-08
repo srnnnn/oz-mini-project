@@ -34,7 +34,7 @@ const MovieDetail = () => {
   }, [id]);
 
   if (error) {
-    return <div>에러발생</div>;
+    return <div>에러..</div>;
   }
   if (!movieDetail) {
     return <div className="">로딩중..</div>;
@@ -96,6 +96,7 @@ const MovieDetail = () => {
               <MovieCardDetail
                 backdrop_path={movie.backdrop_path}
                 title={movie.title}
+                id={movie.id}
               />
             </SwiperSlide>
           ))}
