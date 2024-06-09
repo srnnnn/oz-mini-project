@@ -1,13 +1,31 @@
-import React, { useEffect, useState } from "react";
-import "./NavBar.css";
+import { useEffect, useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { IoSearch } from "react-icons/io5";
+import { getAuth, onAuthStateChanged, signOut } from "firebase/auth";
+import app from "../firebase";
+import "./NavBar.css";
 
 const NavBar = () => {
   const [search, setSearch] = useState("");
+  const [user, setUser] = useState("");
   const navigate = useNavigate();
-
   const location = useLocation();
+  const auth = getAuth(app);
+
+  useEffect(() => {
+    onAuthStateChanged(auth, (user) => {
+      setUser(user);
+    });
+  }, [auth]);
+
+  useEffect(() => {
+    if (
+      (location.pathname === "/login" || location.pathname === "/signup") &&
+      user
+    ) {
+      navigate("/");
+    }
+  }, [location.pathname, user]);
 
   const handleSearchInput = (e) => {
     setSearch(e.target.value);
@@ -16,9 +34,18 @@ const NavBar = () => {
 
   useEffect(() => {
     if (location.pathname === "/") {
-      setSearch("");
+      setSearch(""); //검색어리셋
     }
-  }, [location]);
+  }, [location.pathname]);
+
+  const handleLogout = () => {
+    signOut(auth)
+      .then(() => {
+        setUser(null);
+        navigate("/");
+      })
+      .catch((error) => console.log(error.message));
+  };
 
   return (
     <nav className="navContainer">
@@ -40,14 +67,28 @@ const NavBar = () => {
           autoComplete="off"
         />
       </div>
-      <div className="btnDiv">
-        <Link to={"/login"}>
-          <button className="loginBtn">로그인</button>
-        </Link>
-        <Link to={"/signup"}>
-          <button className="signupBtn">회원가입</button>
-        </Link>
-      </div>
+      {user ? (
+        <div className="userImgDiv">
+          <img
+            src={user.photoURL || "src/images/noimg_2.png"}
+            alt={user.displayName}
+            className="userImg"
+          />
+          <div className="dropdown">
+            <p onClick={handleLogout}>로그아웃</p>
+            <p>마이페이지</p>
+          </div>
+        </div>
+      ) : (
+        <div className="btnDiv">
+          <Link to={"/login"}>
+            <button className="loginBtn">로그인</button>
+          </Link>
+          <Link to={"/signup"}>
+            <button className="signupBtn">회원가입</button>
+          </Link>
+        </div>
+      )}
     </nav>
   );
 };

@@ -3,7 +3,6 @@ import "./MovieCardDetail.css";
 import { Link } from "react-router-dom";
 
 const MovieCardDetail = ({ backdrop_path, id, title }) => {
-  console.log(id);
   return (
     <div className="movieCardDetail">
       {backdrop_path ? (

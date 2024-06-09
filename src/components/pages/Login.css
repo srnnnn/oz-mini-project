@@ -118,6 +118,7 @@
   font-size: 1.3rem;
   text-align: center;
 }
+
 @media (max-width: 768px) {
   .loginContainer {
     width: 35rem;

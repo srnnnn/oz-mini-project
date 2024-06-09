@@ -17,10 +17,11 @@
   justify-content: center;
   align-items: center;
   margin-left: 3rem;
+  width: 9rem;
 }
 
 .logoImg {
-  width: 100px;
+  width: 80%;
   object-fit: cover;
 }
 
@@ -57,6 +58,7 @@
   justify-content: center;
   align-items: center;
   margin-right: 3rem;
+  width: 9rem;
 }
 .loginBtn,
 .signupBtn {
@@ -66,16 +68,48 @@
   width: 4rem;
   background-color: black;
   color: white;
-  margin-left: 20px;
   cursor: pointer;
   font-weight: 400;
+}
+.loginBtn {
+  margin-right: 1rem;
 }
 
 .loginBtn:hover,
 .signupBtn:hover {
   background-color: #424242;
 }
-
+.userImgDiv {
+  position: relative;
+  width: 9rem;
+  margin-right: 3rem;
+  display: flex;
+  cursor: pointer;
+  align-items: center;
+  justify-content: flex-end;
+}
+.userImg {
+  width: 2rem;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.dropdown {
+  display: none;
+  position: absolute;
+  top: 50px;
+  right: 0;
+  background-color: white;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  /* z-index: 1; */
+  width: 9rem;
+  border-radius: 5px;
+}
+.dropdown p {
+  padding: 0 1rem;
+}
+.userImgDiv:hover .dropdown {
+  display: block;
+}
 @media (max-width: 768px) {
   .signupBtn {
     display: none;
