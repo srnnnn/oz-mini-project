@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 //검색창에 입력이 멈춘 후(delay동안) 값 처리함
 export const useDebounce = (value, delay) => {
   //value가 아마 q?로받아온 파라미터, delay는 얼마나 delay 시킬건지
-  const [debouncedValue, setDebouncedValue] = useState(value); //여기 초기값은 빈값이여도 되지않나?
+  const [debouncedValue, setDebouncedValue] = useState(value); //여기 초기값은 빈값이여도 되지않나?//
 
   useEffect(() => {
     const handler = setTimeout(() => {
