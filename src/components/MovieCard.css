@@ -71,6 +71,10 @@
   .movieVote {
     font-size: 0.9rem;
   }
+  .movieHeart {
+    font-size: 1.3rem;
+    padding-right: 0.3rem;
+  }
 }
 @media (min-width: 400px) and (max-width: 768px) {
   .movieImgDiv {
@@ -91,6 +95,10 @@
   .movieVote {
     font-size: 0.9rem;
   }
+  .movieHeart {
+    font-size: 1.3rem;
+    padding-right: 0.3rem;
+  }
 }
 @media (max-width: 480px) {
   .movieImgDiv {
@@ -110,5 +118,9 @@
   }
   .movieVote {
     font-size: 0.8rem;
+  }
+  .movieHeart {
+    font-size: 1rem;
+    padding-right: 0.3rem;
   }
 }

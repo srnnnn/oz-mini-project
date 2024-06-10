@@ -9,7 +9,7 @@ import {
 import app from "../../firebase";
 
 const Login = () => {
-  const auth = getAuth(app);
+  const auth = getAuth(app); //app인자는 없어도 됨
   const provider = new GoogleAuthProvider();
   const navigate = useNavigate();
 

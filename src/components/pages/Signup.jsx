@@ -31,12 +31,13 @@ const Signup = () => {
         .catch((error) => {
           switch (error.code) {
             case "auth/email-already-in-use":
-              alert("이미 가입한 이메일 입니다.");
+              alert("이미 가입된 이메일 입니다.");
               break;
           }
         });
     } else {
       console.log("가입실패");
+      alert("회원가입에 실패하였습니다.");
     }
   };
 
@@ -46,7 +47,7 @@ const Signup = () => {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
     if (!emailRegex.test(email)) {
-      setEmailMsg("이메일 양식에 맞게 작성해주세요");
+      setEmailMsg("이메일 양식에 맞게 작성해주세요.");
       setEmailValid(false);
     } else {
       setEmailMsg("");
@@ -62,7 +63,7 @@ const Signup = () => {
     if (!pwd) {
       setPwdMsg("");
     } else if (!passwordRegex.test(pwd)) {
-      setPwdMsg("영문, 숫자, 특수기호를 포함하여 8자리 이상으로 작성해주세요");
+      setPwdMsg("영문, 숫자, 특수기호를 포함하여 8자리 이상으로 작성해주세요.");
       setPwdValid(false);
     } else {
       setPwdMsg("사용가능한 비밀번호입니다.");
