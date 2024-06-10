@@ -54,7 +54,11 @@ const NavBar = () => {
     <nav className="navContainer">
       <Link to={"/"}>
         <div className="logoDiv">
-          <img src="src/images/logo.png" alt="로고" className="logoImg"></img>
+          <img
+            src="../src/images/logo.png"
+            alt="로고"
+            className="logoImg"
+          ></img>
         </div>
       </Link>
       {location.pathname === ""}
