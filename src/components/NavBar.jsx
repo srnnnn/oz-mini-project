@@ -44,7 +44,10 @@ const NavBar = () => {
         setUser(null);
         navigate("/");
       })
-      .catch((error) => console.log(error.message));
+      .catch((error) => {
+        console.log(error.message);
+        alert("로그아웃이 완료되지 않았습니다");
+      });
   };
 
   return (
@@ -75,8 +78,13 @@ const NavBar = () => {
             className="userImg"
           />
           <div className="dropdown">
+            <Link
+              to={"/mypage"}
+              style={{ textDecoration: "none", color: "black" }}
+            >
+              <p>마이페이지</p>
+            </Link>
             <p onClick={handleLogout}>로그아웃</p>
-            <p>마이페이지</p>
           </div>
         </div>
       ) : (

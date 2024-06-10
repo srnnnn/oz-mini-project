@@ -33,6 +33,25 @@
   transform: scale(1.05);
 }
 
+.movieInfo {
+  display: flex;
+  justify-content: space-between;
+}
+.movieHeart {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 1.5rem;
+  font-size: 1.8rem;
+  padding-right: 1rem;
+  cursor: pointer;
+  color: #fb3958;
+}
+.movieHeart:hover {
+  transform: scale(1.05);
+  transition: transform 0.7ms ease;
+}
+
 @media (min-width: 768px) and (max-width: 1024px) {
   .movieImgDiv {
     width: 10rem;

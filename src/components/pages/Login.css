@@ -165,4 +165,17 @@
     font-size: 16px;
     margin-top: 1rem;
   }
+  .loginHr {
+    width: 85%;
+  }
+  .loginHr legend {
+    font-size: 0.8rem;
+    padding: 0 1rem;
+  }
+  .googleImgDiv {
+    height: 2rem;
+  }
+  .socialLoginTextDiv p {
+    font-size: 1rem;
+  }
 }
