@@ -73,7 +73,7 @@ const NavBar = () => {
       {user ? (
         <div className="userImgDiv">
           <img
-            src={user.photoURL || "src/images/noimg_2.png"}
+            src={user.photoURL || "/noimg_2.png"}
             alt={user.displayName}
             className="userImg"
           />

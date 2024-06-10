@@ -45,8 +45,7 @@
   font-size: 1.8rem;
   padding-right: 1rem;
   cursor: pointer;
-  color: #0000ff;
-  /* fb3958 */
+  color: #fb3958;
 }
 .movieHeart:hover {
   transform: scale(1.05);

@@ -21,7 +21,7 @@ const MovieCardDetail = ({ backdrop_path, id, title }) => {
       ) : (
         <div className="noImageDiv">
           {/* <div className="noImageTitle">{title}</div> */}
-          <img src="../src/images/noimg.jpg" className="noImage" />
+          <img src="/noimg.jpg" className="noImage" />
         </div>
       )}
     </div>

@@ -81,10 +81,7 @@ const Login = () => {
             </fieldset>
             <div className="socialLoginContainer">
               <div className="googleImgDiv">
-                <img
-                  src="src/images/Search_GSA.original.png"
-                  className="googleImg"
-                />
+                <img src="/Search_GSA.original.png" className="googleImg" />
               </div>
               <div className="socialLoginTextDiv" onClick={handleAuth}>
                 <p>Google로 로그인</p>
