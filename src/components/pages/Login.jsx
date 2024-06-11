@@ -1,4 +1,4 @@
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import "./Login.css";
 import {
   getAuth,
@@ -76,6 +76,16 @@ const Login = () => {
             <button type="submit" className="submitLoginBtn">
               로그인
             </button>
+            <p className="toJoin">
+              아직 계정이 없으신가요?{" "}
+              <Link
+                to={"/signup"}
+                style={{ textDecoration: "none", color: "black" }}
+                className="join"
+              >
+                회원가입하기
+              </Link>
+            </p>
             <fieldset className="loginHr">
               <legend>또는 다른 서비스 계정으로 로그인</legend>
             </fieldset>

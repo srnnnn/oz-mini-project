@@ -6,6 +6,8 @@
   /* border: 1px solid #454545; */
   margin-bottom: 10px;
   padding: 5px;
+  display: flex;
+  flex-direction: column;
 }
 .movieImgDiv {
   /* position: relative; */
@@ -34,16 +36,17 @@
 }
 
 .movieInfo {
+  margin-top: auto;
+}
+.movieInfoText {
   display: flex;
+  align-items: center;
   justify-content: space-between;
 }
 .movieHeart {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   width: 1.5rem;
-  font-size: 1.8rem;
-  padding-right: 1rem;
+  font-size: 1.5rem;
+  padding-right: 0.5rem;
   cursor: pointer;
   color: #fb3958;
 }

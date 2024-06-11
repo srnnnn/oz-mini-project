@@ -14,9 +14,7 @@ const Search = () => {
   };
 
   let query = useQuery(); //반환받은 urlSearchParams객체
-  //   console.log(query);
   const searchTerm = query.get("q"); //넘겼던 파라미터 받음 key가 q인 value를 받음
-  //   console.log(searchTerm);
   const debounceSearchTerm = useDebounce(searchTerm, 500);
 
   useEffect(() => {
@@ -27,11 +25,9 @@ const Search = () => {
 
   const fetchSearchMovieData = async (searchTerm) => {
     try {
-      console.log("api 함수" + searchTerm);
       const resp = await api.get(
         `/search/multi?include_adult=false&query=${searchTerm}`
       );
-      // console.log(resp);
       setSearchMovie(resp.data.results);
     } catch (error) {
       console.log(error);

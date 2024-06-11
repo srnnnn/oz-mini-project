@@ -1,13 +1,15 @@
 import { useState } from "react";
 import "./MovieCard.css";
 import { Link } from "react-router-dom";
+import { RxHeart } from "react-icons/rx";
+import { RxHeartFilled } from "react-icons/rx";
 
 const MovieCard = ({ poster_path, title, id, vote_avg }) => {
-  const [movieHeart, setMovieHeart] = useState("♡");
+  const [movieHeart, setMovieHeart] = useState(<RxHeart />);
   const [clickHeart, setClickHeart] = useState(false);
   const handleInterestList = () => {
     setClickHeart(!clickHeart);
-    clickHeart ? setMovieHeart("♡") : setMovieHeart("♥");
+    clickHeart ? setMovieHeart(<RxHeart />) : setMovieHeart(<RxHeartFilled />);
   };
   return (
     <div className="movieCard" key={id}>
@@ -27,9 +29,13 @@ const MovieCard = ({ poster_path, title, id, vote_avg }) => {
         </div>
       </Link>
       <div className="movieInfo">
-        <div className="movieVote">평점 {Math.floor(vote_avg * 10) / 10}</div>
-        <div className="movieHeart" onClick={handleInterestList}>
-          {movieHeart}
+        <div className="movieInfoText">
+          <div className="movieVote">
+            평점 : {Math.floor(vote_avg * 10) / 10}
+          </div>
+          <div className="movieHeart" onClick={handleInterestList}>
+            {movieHeart}
+          </div>
         </div>
       </div>
     </div>

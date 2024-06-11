@@ -91,15 +91,17 @@ const MovieDetail = () => {
           }}
           // navigation
         >
-          {movieSimilar.map((movie) => (
-            <SwiperSlide key={movie.id}>
-              <MovieCardDetail
-                backdrop_path={movie.backdrop_path}
-                title={movie.title}
-                id={movie.id}
-              />
-            </SwiperSlide>
-          ))}
+          {movieSimilar
+            .filter((movie) => movie.backdrop_path && movie.title)
+            .map((movie) => (
+              <SwiperSlide key={movie.id}>
+                <MovieCardDetail
+                  backdrop_path={movie.backdrop_path}
+                  title={movie.title}
+                  id={movie.id}
+                />
+              </SwiperSlide>
+            ))}
         </Swiper>
       </div>
     </>
