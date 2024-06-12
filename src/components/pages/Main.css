@@ -1,8 +1,9 @@
 .bannerContainer {
   width: 100vw;
-  margin: 1rem;
+  margin: 0rem;
+  /* background-color: #262626; */
 }
 .bannerMovies {
-  width: 70%;
+  width: 80%;
   margin: 0 auto;
 }

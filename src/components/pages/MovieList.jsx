@@ -10,7 +10,7 @@ const MovieList = () => {
     const fetchMovieData = async () => {
       try {
         const resp = await api.get("/movie/popular");
-        // const resp2 = await api.get("/movie/now_playing");
+        console.log(resp);
         setMovies(resp.data.results);
       } catch (error) {
         console.error("Error: ", error);

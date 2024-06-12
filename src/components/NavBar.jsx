@@ -10,11 +10,12 @@ const NavBar = () => {
   const [user, setUser] = useState("");
   const navigate = useNavigate();
   const location = useLocation();
-  const auth = getAuth(app);
+  const auth = getAuth(app); //여기app도..왜 들어갈까..
 
   useEffect(() => {
     onAuthStateChanged(auth, (user) => {
       setUser(user);
+      // console.log(user);
     });
   }, [auth]);
 

@@ -39,3 +39,19 @@
 .noImage:hover {
   transform: scale(1.05);
 }
+@media (max-width: 1440px) {
+  .MovieCardDetailImgDiv {
+    padding: 0.5rem;
+  }
+}
+
+@media (min-width: 400px) and (max-width: 768px) {
+  .MovieCardDetailImgDiv {
+    padding: 0.2rem;
+  }
+}
+@media (max-width: 480px) {
+  .MovieCardDetailImgDiv {
+    padding: 0.2rem;
+  }
+}
