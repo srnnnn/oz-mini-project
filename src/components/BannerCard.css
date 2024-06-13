@@ -1,0 +1,9 @@
+.bannerContainer {
+}
+.bannerImgDiv {
+  display: flex;
+  justify-content: center;
+}
+.bannerImg {
+  border-radius: 1rem;
+}

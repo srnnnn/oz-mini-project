@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
-import MovieCard from "../../components/MovieCard";
-import api from "../../api/axios";
+import MovieCard from "../components/MovieCard";
+import api from "../api/axios";
 import "./MovieList.css";
 
 const MovieList = () => {

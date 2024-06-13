@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
-import { useDebounce } from "../hooks/useDebounce";
-import api from "../../api/axios";
-import MovieCard from "../MovieCard";
+import { useDebounce } from "../components/hooks/useDebounce";
+import api from "../api/axios";
+import MovieCard from "../components/MovieCard";
 import "./Search.css";
 
 const Search = () => {

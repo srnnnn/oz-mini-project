@@ -20,7 +20,7 @@ const MovieCard = ({ poster_path, title, id, vote_avg }) => {
         <div className="movieImgDiv">
           <img
             className="movieImg"
-            src={`https://image.tmdb.org/t/p/original/${poster_path}`}
+            src={`https://image.tmdb.org/t/p/w342/${poster_path}`}
             alt={`${title} 포스터 사진`}
           />
         </div>

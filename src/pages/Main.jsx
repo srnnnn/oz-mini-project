@@ -1,8 +1,8 @@
 import "./Main.css";
 import MovieList from "./MovieList";
 import { useEffect, useState } from "react";
-import api from "../../api/axios";
-import MovieCardDetail from "../MovieCardDetail";
+import api from "../api/axios";
+import BannerCard from "../components/BannerCard";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
@@ -11,7 +11,7 @@ import "swiper/css/navigation";
 
 // import "./styles.css";
 
-import { Autoplay, Pagination, Navigation } from "swiper/modules";
+import { Autoplay, Pagination, Navigation, Mousewheel } from "swiper/modules";
 
 const Main = () => {
   const [bannerMovies, setBannerMovies] = useState([]);
@@ -34,8 +34,11 @@ const Main = () => {
       <div className="bannerContainer">
         <div className="bannerMovies">
           <Swiper
-            spaceBetween={30}
+            // slidesPerView={2}
+            direction={"vertical"}
+            spaceBetween={10}
             centeredSlides={true}
+            mousewheel={true}
             autoplay={{
               delay: 2500,
               disableOnInteraction: false,
@@ -43,13 +46,13 @@ const Main = () => {
             pagination={{
               clickable: true,
             }}
-            navigation={false}
-            modules={[Autoplay, Pagination, Navigation]}
+            style={{ height: "500px" }}
+            modules={[Autoplay, Pagination, Navigation, Mousewheel]}
             className="mySwiper"
           >
             {bannerMovies.map((movie) => (
               <SwiperSlide key={movie.id}>
-                <MovieCardDetail
+                <BannerCard
                   backdrop_path={movie.backdrop_path}
                   title={movie.title}
                   id={movie.id}

@@ -58,9 +58,11 @@ const NavBar = () => {
           <img src="/logo.png" alt="로고" className="logoImg"></img>
         </div>
       </Link>
-      {location.pathname === ""}
+      {/* {location.pathname === ""} */}
       <div className="searchDiv">
-        <IoSearch className="searchIcon" />
+        <Link to={"/search-m"}>
+          <IoSearch className="searchIcon" />
+        </Link>
         <input
           type="text"
           name="search"

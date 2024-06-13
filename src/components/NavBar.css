@@ -51,6 +51,7 @@
   color: white;
   font-size: 1.5em;
   padding-top: 0.3rem;
+  display: none;
 }
 .btnDiv {
   display: flex;
@@ -131,6 +132,24 @@
   .loginBtn {
     border: none;
   }
+  .userImgDiv {
+    width: 4rem;
+  }
+  .searchDiv {
+    width: 5rem;
+    height: 100%;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    border: none;
+    flex-grow: 1;
+  }
+  .searchDiv input {
+    display: none;
+  }
+  .searchIcon {
+    display: block;
+  }
 }
 @media (max-width: 480px) {
   .btnDiv {
@@ -147,8 +166,8 @@
     font-size: 0.8rem;
   }
   .userImgDiv {
-    margin-right: 1rem;
-    width: 7rem;
+    margin-right: 1.3rem;
+    width: 3rem;
   }
   .userImg {
     width: 1.5rem;
@@ -159,5 +178,20 @@
   .dropdown p {
     padding: 0 1rem;
     font-size: 0.8rem;
+  }
+  .searchDiv {
+    width: 5rem;
+    height: 100%;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    border: none;
+    flex-grow: 1;
+  }
+  .searchDiv input {
+    display: none;
+  }
+  .searchIcon {
+    display: block;
   }
 }
