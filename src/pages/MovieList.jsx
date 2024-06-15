@@ -3,13 +3,13 @@ import MovieCard from "../components/MovieCard";
 import api from "../api/axios";
 import "./MovieList.css";
 
-const MovieList = () => {
+const MovieList = ({ endpoint }) => {
   const [movies, setMovies] = useState([]);
 
   useEffect(() => {
     const fetchMovieData = async () => {
       try {
-        const resp = await api.get("/movie/popular");
+        const resp = await api.get(endpoint);
         console.log(resp);
         setMovies(resp.data.results);
       } catch (error) {
@@ -18,8 +18,9 @@ const MovieList = () => {
     };
     fetchMovieData();
   }, []);
+
   return (
-    <div className="container">
+    <div className="movieListContainer">
       {movies
         .filter((movie) => movie.poster_path && movie.title)
         .map((movie) => (

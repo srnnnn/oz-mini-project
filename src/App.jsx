@@ -10,6 +10,7 @@ import Footer from "./components/Footer";
 import Mypage from "./pages/Mypage";
 import Main from "./pages/Main";
 import SearchM from "./pages/SearchM";
+import MovieList from "./pages/MovieList";
 
 function App() {
   const Layout = () => {
@@ -21,12 +22,23 @@ function App() {
       </>
     );
   };
-
   return (
     <>
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route path="/" element={<Main />} />
+          <Route
+            path="/popular-movies"
+            element={<MovieList endpoint="/movie/popular" />}
+          />
+          <Route
+            path="/now-playing"
+            element={<MovieList endpoint="/movie/now_playing" />}
+          />
+          <Route
+            path="//top_rated"
+            element={<MovieList endpoint="/movie/top_rated" />}
+          />
           <Route path="details/:id" element={<MovieDetail />} />
           <Route path="signup" element={<Signup />}></Route>
           <Route path="login" element={<Login />}></Route>

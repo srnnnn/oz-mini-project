@@ -122,6 +122,7 @@
   .btnDiv {
     margin-right: 0rem;
     justify-content: flex-end;
+    width: 5.5rem;
   }
   .signupBtn {
     display: none;
@@ -149,6 +150,8 @@
   }
   .searchIcon {
     display: block;
+    font-size: 1.3rem;
+    padding-top: 0rem;
   }
 }
 @media (max-width: 480px) {
@@ -193,5 +196,7 @@
   }
   .searchIcon {
     display: block;
+    font-size: 1.2rem;
+    padding-top: 0rem;
   }
 }

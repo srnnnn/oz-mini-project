@@ -5,18 +5,20 @@ import { Link } from "react-router-dom";
 const MovieCardDetail = ({ backdrop_path, id, title }) => {
   return (
     <div className="movieCardDetail">
-      <div className="MovieCardDetailImgDiv">
-        <Link
-          to={`/details/${id}`}
-          style={{ textDecoration: "none", color: "black" }}
-        >
+      <Link
+        to={`/details/${id}`}
+        style={{ textDecoration: "none", color: "black" }}
+      >
+        <div className="MovieCardDetailImgDiv">
           <img
-            src={`https://image.tmdb.org/t/p/original/${backdrop_path}`}
+            src={`https://image.tmdb.org/t/p/w500/${backdrop_path}`}
             alt={title}
             className="MovieCardDetailImg"
           />
-        </Link>
-      </div>
+
+          <div className="movieTitleOverlay">{title}</div>
+        </div>
+      </Link>
     </div>
   );
 };
