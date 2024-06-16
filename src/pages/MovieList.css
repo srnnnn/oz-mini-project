@@ -4,12 +4,15 @@
   box-sizing: border-box;
   justify-content: center;
   margin-bottom: 2rem;
-  padding: 0 calc(1.5vw + 1rem);
   justify-content: space-evenly;
+  padding: 0 0.1rem;
   /* display: grid;
       grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
       width: 100vw;
       box-sizing: border-box; */
+}
+.pageTitle {
+  padding-left: 1.8rem;
 }
 @media (min-width: 768px) and (max-width: 1024px) {
   .container {

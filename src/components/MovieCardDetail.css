@@ -15,7 +15,7 @@
   transition: filter 0.3s ease;
 }
 .MovieCardDetailImgDiv:hover {
-  transform: scale(1.03);
+  /* transform: scale(1.03); */
 }
 .MovieCardDetailImgDiv:hover .MovieCardDetailImg {
   filter: brightness(30%); /* 이미지 어둡게 */
@@ -36,7 +36,7 @@
   width: 100%;
   max-width: 100%;
   overflow: hidden;
-  text-overflow: ellipsis; /* 넘치는 텍스트 '...'으로 줄임 */
+  text-overflow: ellipsis; /* 넘치는 텍스트 ...으로 줄임 */
 }
 
 .MovieCardDetailImgDiv:hover .movieTitleOverlay {
@@ -57,5 +57,8 @@
 @media (max-width: 480px) {
   .MovieCardDetailImgDiv {
     padding: 0.2rem;
+  }
+  .movieTitleOverlay {
+    font-size: 0.8rem;
   }
 }

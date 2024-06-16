@@ -111,7 +111,7 @@ const Main = () => {
         <div className="categoryText">
           <h2>순위별 영화</h2>
           <Link
-            to="/top_rated"
+            to="/top-rated"
             style={{ textDecoration: "none", color: "black" }}
             className="more"
           >

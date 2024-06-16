@@ -31,4 +31,14 @@
 }
 .categoryHr {
   width: 95vw;
+  opacity: 50%;
+}
+
+@media (max-width: 480px) {
+  .categoryText a {
+    font-size: 0.6rem;
+  }
+  .movieCategory h2 {
+    font-size: 1rem;
+  }
 }

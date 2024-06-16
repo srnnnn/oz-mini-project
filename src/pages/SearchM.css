@@ -1,6 +1,30 @@
 .searchMcontainer {
+  margin: 1rem auto;
+  width: 80vw;
   display: flex;
-  flex-wrap: wrap;
-  box-sizing: border-box;
-  justify-content: center;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid #5d5d5dc2;
+  border-radius: 0.5rem;
+  padding: 0 1rem;
+}
+.searchMdiv {
+  flex-grow: 1;
+}
+.searchH2 {
+  padding-left: 1.3rem;
+  margin-bottom: 0;
+}
+.searchMinput {
+  width: 80%;
+  height: 2rem;
+  border: none;
+  padding: 0.3rem 0;
+}
+.searchMbtn {
+  display: none;
+}
+
+.searchMinput:focus {
+  outline: none;
 }

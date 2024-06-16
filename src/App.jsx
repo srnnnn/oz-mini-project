@@ -36,7 +36,7 @@ function App() {
             element={<MovieList endpoint="/movie/now_playing" />}
           />
           <Route
-            path="//top_rated"
+            path="/top-rated"
             element={<MovieList endpoint="/movie/top_rated" />}
           />
           <Route path="details/:id" element={<MovieDetail />} />
