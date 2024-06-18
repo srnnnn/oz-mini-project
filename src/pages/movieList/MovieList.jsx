@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
-import MovieCard from "../components/MovieCard";
-import api from "../api/axios";
+import MovieCard from "../../components/MovieCard";
+import api from "../../api/axios";
 import "./MovieList.css";
 
 const MovieList = ({ endpoint }) => {
@@ -11,7 +11,6 @@ const MovieList = ({ endpoint }) => {
     const fetchMovieData = async () => {
       try {
         const resp = await api.get(endpoint);
-        console.log(resp);
         setMovies(resp.data.results);
       } catch (error) {
         console.error("Error: ", error);
@@ -29,7 +28,6 @@ const MovieList = ({ endpoint }) => {
         setPageTitle("영화 목록");
         break;
     }
-    console.log(endpoint);
     fetchMovieData();
   }, [endpoint]);
 

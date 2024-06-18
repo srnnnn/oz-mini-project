@@ -3,14 +3,14 @@ import "./App.css";
 import { Outlet, Route, Routes } from "react-router-dom";
 import MovieDetail from "./components/MovieDetail";
 import NavBar from "./components/NavBar";
-import Signup from "./pages/Signup";
-import Login from "./pages/Login";
-import Search from "./pages/Search";
+import Signup from "./pages/signup/Signup";
+import Login from "./pages/login/Login";
+import Search from "./pages/search/Search";
 import Footer from "./components/Footer";
-import Mypage from "./pages/Mypage";
+import Mypage from "./pages/mypage/Mypage";
 import Main from "./pages/Main";
-import SearchM from "./pages/SearchM";
-import MovieList from "./pages/MovieList";
+import SearchM from "./pages/search/SearchM";
+import MovieList from "./pages/movieList/MovieList";
 
 function App() {
   const Layout = () => {

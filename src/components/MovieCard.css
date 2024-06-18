@@ -54,6 +54,9 @@
   transform: scale(1.05);
   transition: transform 0.7ms ease;
 }
+.movieHidden {
+  display: none;
+}
 
 @media (min-width: 768px) and (max-width: 1024px) {
   .movieImgDiv {

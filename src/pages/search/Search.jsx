@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
-import { useDebounce } from "../components/hooks/useDebounce";
-import api from "../api/axios";
-import MovieCard from "../components/MovieCard";
+import { useDebounce } from "../../components/hooks/useDebounce";
+import api from "../../api/axios";
+import MovieCard from "../../components/MovieCard";
 import "./Search.css";
 
 const Search = () => {
@@ -37,15 +37,17 @@ const Search = () => {
   if (searchMovie.length > 0) {
     return (
       <div className="searchContainer">
-        {searchMovie.map((movie) => (
-          <MovieCard
-            key={movie.id}
-            id={movie.id}
-            poster_path={movie.poster_path}
-            title={movie.title}
-            vote_avg={movie.vote_average}
-          />
-        ))}
+        {searchMovie
+          .filter((movie) => movie.poster_path && movie.title)
+          .map((movie) => (
+            <MovieCard
+              key={movie.id}
+              id={movie.id}
+              poster_path={movie.poster_path}
+              title={movie.title}
+              vote_avg={movie.vote_average}
+            />
+          ))}
       </div>
     );
   } else {

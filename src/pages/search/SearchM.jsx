@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import "./SearchM.css";
-import api from "../api/axios";
-import MovieCard from "../components/MovieCard";
+import api from "../../api/axios";
+import MovieCard from "../../components/MovieCard";
+import { RxCross2 } from "react-icons/rx";
 
 const SearchM = () => {
   const [search, setSearch] = useState("");
@@ -39,18 +40,22 @@ const SearchM = () => {
             onChange={handleSearchInput}
           />
         </form>
-        <div onClick={() => setSearch("")}>x</div>
+        <div onClick={() => setSearch("")}>
+          <RxCross2 />
+        </div>
       </div>
       <div className="searchContainer">
-        {searchMovie.map((movie) => (
-          <MovieCard
-            key={movie.id}
-            id={movie.id}
-            poster_path={movie.poster_path}
-            title={movie.title}
-            vote_avg={movie.vote_average}
-          />
-        ))}
+        {searchMovie
+          .filter((movie) => movie.poster_path && movie.title)
+          .map((movie) => (
+            <MovieCard
+              key={movie.id}
+              id={movie.id}
+              poster_path={movie.poster_path}
+              title={movie.title}
+              vote_avg={movie.vote_average}
+            />
+          ))}
       </div>
     </>
   );

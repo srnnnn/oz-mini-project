@@ -47,11 +47,19 @@
 .searchDiv input::-webkit-input-placeholder {
   font-size: 20px;
 }
+.showSearch input::-webkit-input-placeholder {
+  font-size: 16px;
+}
 .searchIcon {
   color: white;
   font-size: 1.5em;
   padding-top: 0.3rem;
   display: none;
+}
+.searchCrossIcon {
+  color: white;
+  display: none;
+  font-size: 1.2em;
 }
 .btnDiv {
   display: flex;
@@ -117,6 +125,40 @@
 .dropdown p:hover {
   color: black;
 }
+.showSearchDiv {
+  background-color: #000000;
+  /* position: absolute; */
+  /* z-index: 99; */
+  min-height: 35vh;
+  display: none;
+  /* overflow: hidden; */
+}
+.showSearch {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+.showSearch input {
+  height: 100%;
+  padding: 0.2rem 1rem;
+  border: none;
+  color: white;
+  background-color: transparent;
+  outline: none;
+  font-size: 16px;
+  border-bottom: 1px solid #ffffff8f;
+}
+.searchMcontainer {
+  margin: 1rem auto;
+  width: 80vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 0.5rem;
+  padding: 0 1rem;
+}
 
 @media (max-width: 768px) {
   .btnDiv {
@@ -152,6 +194,14 @@
     display: block;
     font-size: 1.3rem;
     padding-top: 0rem;
+  }
+  .searchCrossIcon {
+    color: white;
+    display: block;
+    font-size: 1.2em;
+  }
+  .showSearchDiv {
+    display: block;
   }
 }
 @media (max-width: 480px) {
@@ -198,5 +248,13 @@
     display: block;
     font-size: 1.2rem;
     padding-top: 0rem;
+  }
+  .searchCrossIcon {
+    color: white;
+    display: block;
+    font-size: 1.2em;
+  }
+  .showSearchDiv {
+    display: block;
   }
 }
