@@ -8,8 +8,16 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
+import "swiper/css/effect-coverflow";
+import "swiper/css/autoplay";
 
-import { Navigation, Pagination, A11y, Autoplay } from "swiper/modules";
+import {
+  Navigation,
+  Pagination,
+  A11y,
+  Autoplay,
+  EffectCoverflow,
+} from "swiper/modules";
 
 const Main = () => {
   const [popularMovies, setPopularMovies] = useState([]);
@@ -36,35 +44,40 @@ const Main = () => {
 
   return (
     <>
-      {/* <div className="bannerContainer">
-        <div className="bannerMovies">
-          <Swiper
-            spaceBetween={10}
-            centeredSlides={false}
-            slidesPerView={1}
-            autoplay={{
-              delay: 2500,
-              disableOnInteraction: false,
-            }}
-            pagination={{
-              clickable: true,
-            }}
-            navigation={false}
-            modules={[Autoplay, Pagination, Navigation]}
-            className="mySwiper"
-          >
-            {bannerMovies.map((movie) => (
-              <SwiperSlide key={movie.id}>
-                <MovieCardDetail
-                  backdrop_path={movie.backdrop_path}
-                  title={movie.title}
-                  id={movie.id}
-                />
-              </SwiperSlide>
-            ))}
-          </Swiper>
-        </div>
-      </div> */}
+      <div className="bannerContainer">
+        <Swiper
+          modules={[EffectCoverflow, Autoplay, Pagination, A11y]}
+          effect="coverflow"
+          grabCursor={true}
+          centeredSlides={true}
+          slidesPerView={2}
+          spaceBetween={0}
+          coverflowEffect={{
+            rotate: 0,
+            stretch: 0,
+            depth: 100,
+            modifier: 1,
+            slideShadows: true,
+          }}
+          autoplay={{
+            delay: 3000,
+            disableOnInteraction: false,
+          }}
+          pagination={{ clickable: true }}
+          className="mySwiper"
+        >
+          {bannerMovies.map((movie) => (
+            <SwiperSlide key={movie.id} className="swiper-slide">
+              <img
+                src={`https://image.tmdb.org/t/p/w780${movie.backdrop_path}`}
+                alt={movie.title}
+                className="swiper-content"
+              />
+            </SwiperSlide>
+          ))}
+        </Swiper>
+      </div>
+
       <div className="movieCategory">
         <div className="categoryText">
           <h2>인기 영화</h2>
@@ -81,7 +94,7 @@ const Main = () => {
           spaceBetween={0}
           breakpoints={{
             0: {
-              slidesPerView: 1, // 1개의 슬라이드를 보여줌
+              slidesPerView: 1,
             },
             200: {
               slidesPerView: 2,
@@ -123,7 +136,7 @@ const Main = () => {
           spaceBetween={0}
           breakpoints={{
             0: {
-              slidesPerView: 1, // 1개의 슬라이드를 보여줌
+              slidesPerView: 1,
             },
             200: {
               slidesPerView: 2,

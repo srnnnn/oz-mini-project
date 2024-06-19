@@ -41,6 +41,11 @@ const NavBar = () => {
     navigate(`/search?q=${e.target.value}`); //search로 했을때는 마지막 자음/모음 안들어감-> 영어로 하면 가능
   };
 
+  //모바일 검색
+  const handleSearchMInput = (search) => {
+    navigate(`/search?q=${search}`);
+  };
+
   //검색어리셋
   useEffect(() => {
     if (location.pathname === "/") {
@@ -168,11 +173,14 @@ const NavBar = () => {
                 />
               ))}
           </div>
-          {/* {searchMovie.length > 0 ? (
-            <Link>
-              <p style={{ color: "white" }}>{search} 에 대한 내용 더보기</p>
-            </Link>
-          ) : null} */}
+          {searchMovie.length > 0 && (
+            <p
+              className="searchMore"
+              onClick={() => handleSearchMInput(search)}
+            >
+              {search} 관련 결과 더보기
+            </p>
+          )}
         </div>
       )}
     </>

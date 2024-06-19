@@ -46,6 +46,7 @@ const Search = () => {
               poster_path={movie.poster_path}
               title={movie.title}
               vote_avg={movie.vote_average}
+              movieText={true}
             />
           ))}
       </div>
