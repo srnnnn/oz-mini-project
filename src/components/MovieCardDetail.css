@@ -8,7 +8,7 @@
   cursor: pointer;
 }
 .MovieCardDetailImg {
-  border-radius: 1rem;
+  border-radius: 0.5rem;
   width: 100%;
   height: auto;
   min-width: 6rem;

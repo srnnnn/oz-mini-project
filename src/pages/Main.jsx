@@ -46,19 +46,26 @@ const Main = () => {
     <>
       <div className="bannerContainer">
         <Swiper
-          modules={[EffectCoverflow, Autoplay, Pagination, A11y]}
+          modules={[Autoplay, Pagination, A11y]}
           effect="coverflow"
           grabCursor={true}
           centeredSlides={true}
-          slidesPerView={2}
-          spaceBetween={0}
-          coverflowEffect={{
-            rotate: 0,
-            stretch: 0,
-            depth: 100,
-            modifier: 1,
-            slideShadows: true,
+          breakpoints={{
+            200: {
+              slidesPerView: 1,
+            },
+            768: {
+              slidesPerView: 2,
+            },
           }}
+          spaceBetween={10}
+          // coverflowEffect={{
+          //   rotate: 0,
+          //   stretch: 0,
+          //   depth: 100,
+          //   modifier: 1,
+          //   slideShadows: true,
+          // }}
           autoplay={{
             delay: 3000,
             disableOnInteraction: false,
@@ -66,13 +73,16 @@ const Main = () => {
           pagination={{ clickable: true }}
           className="mySwiper"
         >
-          {bannerMovies.map((movie) => (
+          {bannerMovies.slice(0, 5).map((movie) => (
             <SwiperSlide key={movie.id} className="swiper-slide">
               <img
                 src={`https://image.tmdb.org/t/p/w780${movie.backdrop_path}`}
                 alt={movie.title}
                 className="swiper-content"
               />
+              <div className="banner-info">
+                <div>{movie.title}</div>
+              </div>
             </SwiperSlide>
           ))}
         </Swiper>

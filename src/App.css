@@ -7,4 +7,6 @@ body {
   box-sizing: border-box;
   font-family: "Noto Sans KR", sans-serif;
   font-optical-sizing: auto;
+  /* background-color: #262626;
+  color: white; */
 }
