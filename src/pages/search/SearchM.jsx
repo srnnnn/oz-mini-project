@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import "./SearchM.css";
 import api from "../../api/axios";
 import MovieCard from "../../components/MovieCard";

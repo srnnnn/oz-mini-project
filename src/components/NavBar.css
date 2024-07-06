@@ -28,12 +28,14 @@
 .searchDiv {
   width: 17rem;
   height: 80%;
-  display: flex;
-  justify-content: center;
   align-items: center;
   border-bottom: 2px solid #ffffff8f;
 }
-
+.search {
+  display: flex;
+  justify-content: center;
+  flex-grow: 1;
+}
 .searchDiv input {
   width: 100%;
   height: 100%;
@@ -89,7 +91,7 @@
 }
 .userImgDiv {
   position: relative;
-  width: 9rem;
+  padding-left: 0rem;
   margin-right: 3rem;
   display: flex;
   cursor: pointer;
@@ -171,6 +173,15 @@
   font-size: 0.8rem;
   font-weight: 400;
 }
+.mode {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 1.5rem;
+  cursor: pointer;
+  font-size: 1.3rem;
+  color: white;
+}
 
 @media (max-width: 768px) {
   .btnDiv {
@@ -188,7 +199,7 @@
     border: none;
   }
   .userImgDiv {
-    width: 4rem;
+    margin-right: 1.5rem;
   }
   .searchDiv {
     width: 5rem;
@@ -218,11 +229,15 @@
   .searchMore {
     padding: 0 2rem 1rem 0;
   }
+  .mode {
+    margin: 0 1rem 0 1rem;
+  }
 }
 @media (max-width: 480px) {
   .btnDiv {
     margin-right: 0rem;
     justify-content: flex-end;
+    width: 4rem;
   }
   .logoDiv {
     margin-left: 1rem;
@@ -232,10 +247,6 @@
     height: 2rem;
     width: 3.3rem;
     font-size: 0.8rem;
-  }
-  .userImgDiv {
-    margin-right: 1.3rem;
-    width: 3rem;
   }
   .userImg {
     width: 1.5rem;
@@ -274,5 +285,8 @@
   }
   .searchMore {
     padding: 0 1rem 1rem 0;
+  }
+  .mode {
+    margin: 0 1rem 0 1rem;
   }
 }

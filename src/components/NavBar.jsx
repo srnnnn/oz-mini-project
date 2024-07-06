@@ -7,12 +7,15 @@ import app from "../firebase";
 import api from "../api/axios";
 import "./NavBar.css";
 import MovieCard from "./MovieCard";
+import { PiSunDimBold } from "react-icons/pi";
+import { PiMoon } from "react-icons/pi";
 
 const NavBar = () => {
   const [search, setSearch] = useState("");
   const [user, setUser] = useState("");
   const [showSearch, setShowSearch] = useState(false); // 검색 창 가시성 상태 변수
   const [searchMovie, setSearchMovie] = useState([]);
+  const [isDarkMode, setIsDarkMode] = useState(false);
 
   const navigate = useNavigate();
   const location = useLocation();
@@ -88,6 +91,20 @@ const NavBar = () => {
     }
   };
 
+  //다크모드
+  const toggleDarkMode = () => {
+    setIsDarkMode(!isDarkMode);
+  };
+  useEffect(() => {
+    if (isDarkMode) {
+      document.body.classList.add("darkmode");
+      document.body.classList.remove("lightmode");
+    } else {
+      document.body.classList.add("lightmode");
+      document.body.classList.remove("darkmode");
+    }
+  });
+
   return (
     <>
       <nav className="navContainer">
@@ -96,24 +113,26 @@ const NavBar = () => {
             <img src="/logo.png" alt="로고" className="logoImg"></img>
           </div>
         </Link>
-        <div className="searchDiv">
-          {/* <Link to={"/search-m"}> */}
-          {!showSearch ? (
-            <IoSearch className="searchIcon" onClick={toggleSearch} />
-          ) : (
-            <RxCross2 className="searchCrossIcon" onClick={toggleSearch} />
-          )}
-
-          {/* </Link> */}
-          <input
-            type="text"
-            name="search"
-            placeholder="검색"
-            className="searchInput"
-            onChange={handleSearchInput}
-            value={search}
-            autoComplete="off"
-          />
+        <div className="search">
+          <div className="searchDiv">
+            {!showSearch ? (
+              <IoSearch className="searchIcon" onClick={toggleSearch} />
+            ) : (
+              <RxCross2 className="searchCrossIcon" onClick={toggleSearch} />
+            )}
+            <input
+              type="text"
+              name="search"
+              placeholder="검색"
+              className="searchInput"
+              onChange={handleSearchInput}
+              value={search}
+              autoComplete="off"
+            />
+          </div>
+        </div>
+        <div className="mode" onClick={toggleDarkMode}>
+          {isDarkMode ? <PiSunDimBold /> : <PiMoon />}
         </div>
         {user ? (
           <div className="userImgDiv">

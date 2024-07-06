@@ -11,13 +11,7 @@ import "swiper/css/pagination";
 import "swiper/css/effect-coverflow";
 import "swiper/css/autoplay";
 
-import {
-  Navigation,
-  Pagination,
-  A11y,
-  Autoplay,
-  EffectCoverflow,
-} from "swiper/modules";
+import { Navigation, Pagination, A11y, Autoplay } from "swiper/modules";
 
 const Main = () => {
   const [popularMovies, setPopularMovies] = useState([]);
@@ -59,13 +53,6 @@ const Main = () => {
             },
           }}
           spaceBetween={10}
-          // coverflowEffect={{
-          //   rotate: 0,
-          //   stretch: 0,
-          //   depth: 100,
-          //   modifier: 1,
-          //   slideShadows: true,
-          // }}
           autoplay={{
             delay: 3000,
             disableOnInteraction: false,
@@ -73,7 +60,7 @@ const Main = () => {
           pagination={{ clickable: true }}
           className="mySwiper"
         >
-          {bannerMovies.slice(0, 5).map((movie) => (
+          {bannerMovies.slice(0, 10).map((movie) => (
             <SwiperSlide key={movie.id} className="swiper-slide">
               <img
                 src={`https://image.tmdb.org/t/p/w780${movie.backdrop_path}`}
@@ -91,11 +78,7 @@ const Main = () => {
       <div className="movieCategory">
         <div className="categoryText">
           <h2>인기 영화</h2>
-          <Link
-            to="/popular-movies"
-            style={{ textDecoration: "none", color: "black" }}
-            className="more"
-          >
+          <Link to="/popular-movies" className="more">
             더보기 {">"}
           </Link>
         </div>
@@ -133,11 +116,7 @@ const Main = () => {
       <div className="movieCategory">
         <div className="categoryText">
           <h2>순위별 영화</h2>
-          <Link
-            to="/top-rated"
-            style={{ textDecoration: "none", color: "black" }}
-            className="more"
-          >
+          <Link to="/top-rated" className="more">
             더보기 {">"}
           </Link>
         </div>

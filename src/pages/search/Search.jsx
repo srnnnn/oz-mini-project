@@ -56,8 +56,8 @@ const Search = () => {
       <section className="noSearch">
         <div className="noSearchText">
           <p>
-            wavve에 <strong>'{searchTerm}'</strong> 에 대한 검색 결과가
-            없습니다.
+            wavve에 <strong>&apos;{searchTerm}&apos;</strong> 에 대한 검색
+            결과가 없습니다.
             <br />
             다른 검색어로 검색해주세요.
           </p>

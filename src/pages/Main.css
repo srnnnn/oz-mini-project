@@ -1,6 +1,5 @@
 .bannerContainer {
   width: 100vw;
-  margin: 0.2em auto;
 }
 .bannerMovies {
   width: 100%;
@@ -36,7 +35,6 @@
 .swiper-content {
   width: 100%;
   height: auto;
-  border-radius: 0.3rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -57,6 +55,10 @@
   left: 0;
   bottom: 0;
   font-size: 1.5rem;
+}
+.more {
+  text-decoration: none;
+  color: inherit;
 }
 
 @media (max-width: 480px) {

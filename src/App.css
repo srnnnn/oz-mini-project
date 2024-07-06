@@ -1,4 +1,4 @@
-body {
+body.lightmode {
   margin: 0;
   padding: 0;
   display: flex;
@@ -9,4 +9,17 @@ body {
   font-optical-sizing: auto;
   /* background-color: #262626;
   color: white; */
+}
+
+body.darkmode {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  font-family: "Noto Sans KR", sans-serif;
+  font-optical-sizing: auto;
+  background-color: #262626;
+  color: white;
 }
